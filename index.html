@@ -323,7 +323,7 @@
             </label>
 
             <label style="margin-left: 20px;">
-                SUBSTITUIÇÃO OU TROCA:
+                ROLLOUT:
                 <input type="checkbox" name="substituicao_troca">
             </label>
 
@@ -455,7 +455,7 @@
 
         <div style="text-align: center; margin-top: 15px;">
             <label for="sintoma" style="display: block; font-weight: bold; margin-bottom: 5px; width: 100%">
-                SINTOMA DO PROBLEMA RELATADO
+                ATIVIDADE PROGRAMADA
             </label>
 
             <textarea id="sintoma" name="sintoma" maxlength="200"
@@ -626,7 +626,7 @@ CHAMADO: ${chamado}
 DATA DO ATENDIMENTO: ${data}
 INÍCIO DA ATIVIDADE: ${inicio}
 TÉRMINO DA ATIVIDADE: ${termino}
-PROBLEMA IDENTIFICADO: ${problema}
+ATIVIDADE PROGRAMADA: ${problema}
 ATIVIDADE REALIZADA: ${atividade}
 OBS.: NÃO FOI RETIRADO NENHUM EQUIPAMENTO OU PERIFÉRICO DO CLIENTE.
 N.º PATRIMÔNIO/SERIAL: ${patrimonio} / ${serie}
@@ -1102,8 +1102,8 @@ NOME DE QUEM ACOMPANHOU A ATIVIDADE: ${acompanhante}
                 const linha1Y = y + 4;
 
                 const itensLinha1 = [
-                    { label: `RETIRADO PARA LABORATÓRIO S/N: ${form.retirado_lab.value || ""}`, checked: null },
-                    { label: "SUBSTITUIÇÃO OU TROCA:", checked: form.substituicao_troca.checked },
+                    { label: `ATIVAÇÃO S/N: ${form.retirado_lab.value || ""}`, checked: null },
+                    { label: "ROLLOUT:", checked: form.substituicao_troca.checked },
                     { label: "UPGRADE (ATUALIZAÇÃO SSD, MEMÓRIA):", checked: form.upgrade.checked }
                 ];
 
@@ -1510,7 +1510,7 @@ NOME DE QUEM ACOMPANHOU A ATIVIDADE: ${acompanhante}
                 doc.setTextColor(255, 255, 255);
                 // Centralização vertical dentro do retângulo vermelho
                 const yTexto = y + (alturaTitulo / 2) + 2; // ajuste fino (+2 para compensar a altura da fonte)
-                doc.text("SINTOMA DO PROBLEMA RELATADO", x + larguraTotal / 2, yTexto, { align: "center" });
+                doc.text("ATIVIDADE PROGRAMADA", x + larguraTotal / 2, yTexto, { align: "center" });
 
 
                 // Retorna nova posição y para o próximo bloco
